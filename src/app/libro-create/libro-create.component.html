@@ -1,0 +1,34 @@
+
+<form (ngSubmit)="onSubmit()" #libroForm="ngForm">
+  <div>
+    <label for="id">ID:</label>
+    <input type="text" id="id" required [(ngModel)]="libro.id" name="id" #id="ngModel">
+  </div>
+
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required [(ngModel)]="libro.nombre" name="nombre" #nombre="ngModel">
+  </div>
+
+  <div>
+    <label for="fechaEscritura">Fecha de Escritura:</label>
+    <input type="date" id="fechaEscritura" required [(ngModel)]="libro.fechaEscritura" name="fechaEscritura" #fechaEscritura="ngModel">
+  </div>
+
+  <div>
+    <label for="numeroEdicion">Número de Edición:</label>
+    <input type="number" id="numeroEdicion" required [(ngModel)]="libro.numeroEdicion" name="numeroEdicion" #numeroEdicion="ngModel">
+  </div>
+
+  <div>
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" required [(ngModel)]="libro.precio" name="precio" #precio="ngModel">
+  </div>
+
+  <div>
+    <label for="tipo">Tipo:</label>
+    <input type="text" id="tipo" required [(ngModel)]="libro.tipo" name="tipo" #tipo="ngModel">
+  </div>
+
+  <button type="submit" [disabled]="!libroForm.form.valid">Crear Libro</button>
+</form>
